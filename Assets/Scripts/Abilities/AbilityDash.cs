@@ -28,6 +28,7 @@ public class AbilityDash : Ability
 
             AbilityEffect();
         }
+
     }
 
     void AbilityEffect()

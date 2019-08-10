@@ -8,7 +8,7 @@ public class MeleeEnemy : Enemy
     public float attackSpeed;
 
     private float attackTime;
-   
+    
 
     private void Update()
     {
@@ -42,8 +42,7 @@ public class MeleeEnemy : Enemy
     }
 
     IEnumerator MeleeAttack() //a coroutine that will execute once triggered, allows for you to have an animation playing over frames, were as if  you did in update it would restart every frame
-    {
-        PlayerScript ps = player.GetComponent<PlayerScript>();
+    {      
         ps.TakeDamage(damage);
 
         //animation for leaping at the player

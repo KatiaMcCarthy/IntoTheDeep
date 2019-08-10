@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ececdf2cbc4591644aabaa19894e4636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healAmmount: 1
+  healAmmount: 2
   lifeTime: 30
   pickupParticle: {fileID: 3318563759649760638, guid: 270c917d8b3f39140872b8969550435b,
     type: 3}

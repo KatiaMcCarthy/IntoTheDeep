@@ -10,12 +10,29 @@ public class Projectile : MonoBehaviour
 
     public GameObject explosion;
 
-    private void Start()
+    [HideInInspector]
+    public GameObject player;
+    [HideInInspector]
+    public PlayerScript ps;
+    [HideInInspector]
+    public Rigidbody2D pRB;
+    [HideInInspector]
+    public float playerSpeed;
+
+
+    public virtual void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        ps = player.GetComponent<PlayerScript>();
+        pRB = player.GetComponent<Rigidbody2D>();
+
+        playerSpeed = pRB.velocity.magnitude;
+        speed = speed + playerSpeed;
+
         Invoke("DestroyProjectile", lifeTime);  
     }
     // Update is called once per frame
-    private void Update()
+    public virtual void Update()
     {
         transform.Translate(Vector2.up * speed * Time.deltaTime);
 
@@ -27,10 +44,14 @@ public class Projectile : MonoBehaviour
             hit.collider.gameObject.GetComponent<Enemy>().TakeDamage(damage);
             DestroyProjectile();
         }
+        else
+        {
+            //do nothing
+        }
 
     }
 
-    void DestroyProjectile()
+    public virtual void DestroyProjectile()
     {
         Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(this.gameObject);

@@ -63,6 +63,7 @@ public class PlayerScript : MonoBehaviour
     //visual effect
     public Animator hurtPanel;
 
+    private AbilityFlare m_AF;
 
     // Start is called before the first frame update
     private void Start()
@@ -74,7 +75,6 @@ public class PlayerScript : MonoBehaviour
         weaponParentObject = GameObject.FindGameObjectWithTag("WeaponParent").transform;
         weaponLocationPt = GameObject.FindGameObjectWithTag("WeaponLocationPt").transform;
         p_Bubbles = GameObject.FindGameObjectWithTag("PlayerBubbles").GetComponent<ParticleSystem>();
-
         //Initalization for bubbles
         //p_BubblesMain = p_Bubbles.main;
        // p_BubblesMain.loop = false;

@@ -27,11 +27,19 @@ public class Enemy : MonoBehaviour
     //visuals
     public GameObject enemyDeathEffect;
 
+    [HideInInspector]
+    public PlayerScript ps;
+
+    private Color m_Color;
+
     public virtual void Start()
     {
         m_transform = this.gameObject.transform;
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        ps = player.GetComponent<PlayerScript>();
         playerAttackPoint = GameObject.FindGameObjectWithTag("PlayerAttackPoint").transform;
+        m_Color = GetComponentInChildren<SpriteRenderer>().color; 
+
     }
 
     public void TakeDamage(int damageAmmount)
@@ -60,9 +68,10 @@ public class Enemy : MonoBehaviour
 
     IEnumerator FlashColor()
     {
-        gameObject.GetComponentInChildren<SpriteRenderer>().color = Color.red;
-        yield return new WaitForSeconds(0.1f);
-        gameObject.GetComponentInChildren<SpriteRenderer>().color = Color.white;
+        GetComponentInChildren<SpriteRenderer>().color = Color.red;
+        yield return new WaitForSeconds(0.25f);
+        GetComponentInChildren<SpriteRenderer>().color = Color.white;
+        yield return null;
     }
 
     private void SpawnWeaponPickup()

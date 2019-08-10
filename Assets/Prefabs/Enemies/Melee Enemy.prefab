@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2375535643642712655}
+  - component: {fileID: 2375535643642712654}
   - component: {fileID: 2375535643642712641}
   - component: {fileID: 2375535643642712640}
-  - component: {fileID: 2375535643642712654}
   - component: {fileID: -3490437304450633003}
   m_Layer: 9
   m_Name: Melee Enemy
@@ -37,6 +37,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2375535643642712654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2375535643642712653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6372d3ee0ed264cb52b3a2773b2783, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+  speed: 12
+  timeBetweenAttacks: 2
+  damage: 2
+  player: {fileID: 0}
+  m_transform: {fileID: 0}
+  playerAttackPoint: {fileID: 0}
+  pickupChance: 30
+  healthPickupChance: 40
+  healthPickup: {fileID: 4287483265476814294, guid: 5cfe5fff9c8ddb44e9148063b65ce0ad,
+    type: 3}
+  pickups:
+  - {fileID: 1085726188946393664, guid: e85b6a7eab2f34e4c93e6ea9c51fd3b3, type: 3}
+  - {fileID: 6993586712683307964, guid: 589897dc140f2eb42a8cfb0bf1e9dece, type: 3}
+  - {fileID: 7944757678649589893, guid: 04bf35a4c416c2c4889a281faf448826, type: 3}
+  enemyDeathEffect: {fileID: 281521820924640981, guid: 998cd2c6047a7d04d8e4c39620845c2f,
+    type: 3}
+  stopDistance: 8
+  attackSpeed: 8
 --- !u!61 &2375535643642712641
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -84,37 +115,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &2375535643642712654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2375535643642712653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a6372d3ee0ed264cb52b3a2773b2783, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 3
-  speed: 15
-  timeBetweenAttacks: 1
-  damage: 2
-  player: {fileID: 0}
-  m_transform: {fileID: 0}
-  playerAttackPoint: {fileID: 0}
-  pickupChance: 30
-  healthPickupChance: 40
-  healthPickup: {fileID: 4287483265476814294, guid: 5cfe5fff9c8ddb44e9148063b65ce0ad,
-    type: 3}
-  pickups:
-  - {fileID: 1085726188946393664, guid: e85b6a7eab2f34e4c93e6ea9c51fd3b3, type: 3}
-  - {fileID: 6993586712683307964, guid: 589897dc140f2eb42a8cfb0bf1e9dece, type: 3}
-  - {fileID: 7944757678649589893, guid: 04bf35a4c416c2c4889a281faf448826, type: 3}
-  enemyDeathEffect: {fileID: 281521820924640981, guid: 998cd2c6047a7d04d8e4c39620845c2f,
-    type: 3}
-  stopDistance: 10
-  attackSpeed: 8
 --- !u!82 &-3490437304450633003
 AudioSource:
   m_ObjectHideFlags: 0

@@ -24,13 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5384084909716549319}
-  m_LocalRotation: {x: 0, y: 0, z: -0.9914449, w: 0.13052626}
+  m_LocalRotation: {x: 0, y: -0, z: 0.99144495, w: -0.13052607}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 5384084909769868370}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -165}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 195}
 --- !u!212 &5384084909716549320
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -190,7 +190,7 @@ MonoBehaviour:
   maxX: 50
   minY: -30
   maxY: 30
-  timeBetweenSummons: 3
+  timeBetweenSummons: 5
   enemyToSummon: {fileID: 928144056807631867, guid: 967c4e262fbd1164fa91e4cc51786bd6,
     type: 3}
   meleeAttackSpeed: 2
@@ -221,13 +221,14 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -0.025458336, y: 3.8513832}
-      - {x: -2.7331705, y: 2.3457184}
-      - {x: -4.9666944, y: -0.75809956}
-      - {x: -2.7869692, y: 0.03795433}
-      - {x: 0.014163017, y: -4.0289817}
-      - {x: 2.9692917, y: -0.10341835}
-      - {x: 4.9666967, y: -0.75809956}
-      - {x: 2.9877586, y: 2.4475546}
+      - {x: -1.4982357, y: 0.25910282}
+      - {x: -5.222198, y: 0.39166737}
+      - {x: -3.0157042, y: -2.6242495}
+      - {x: -1.3391142, y: -3.7520208}
+      - {x: 0.39741898, y: -3.6883101}
+      - {x: 2.5860367, y: -2.6584578}
+      - {x: 4.9666967, y: 0.6471729}
+      - {x: 1.4973192, y: 0.23318577}
 --- !u!1 &7482309806518173261
 GameObject:
   m_ObjectHideFlags: 0

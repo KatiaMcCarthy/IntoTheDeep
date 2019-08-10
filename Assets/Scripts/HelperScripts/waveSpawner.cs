@@ -4,22 +4,6 @@ using UnityEngine;
 
 public class waveSpawner : MonoBehaviour
 {
-    [System.Serializable] //allows the struct to be assinged inside of the unity inspector
-    public class Wave
-    {
-        public Enemy[] enemies;
-        public int count;  //how many enemys will spawn in this wave
-        public float timeBetweenSpawns;
-
-        public Wave(Enemy[] enemys, int eCount, float timeSpawn)
-        {
-            enemies = enemys;
-            count = eCount;
-            timeBetweenSpawns = timeSpawn;
-        }
-
-    }
-
     public Wave[] waves;
     public Transform[] spawnPoints;
     public float timeBetweenWaves;
@@ -55,7 +39,7 @@ public class waveSpawner : MonoBehaviour
         {
             if(player == null)
             {
-                yield break; //exits the coroutine
+                yield break; //exits the for loop
             }
 
             Enemy randomEnemy = currentWave.enemies[Random.Range(0, currentWave.enemies.Length)];//chooses an enemy from the array of enemies
@@ -94,6 +78,7 @@ public class waveSpawner : MonoBehaviour
             }
 
         }
+      
     }
 
     //Getters

@@ -94,7 +94,7 @@ public class SummonerEnemy : Enemy
 
     IEnumerator MeleeAttack() //a coroutine that will execute once triggered, allows for you to have an animation playing over frames, were as if  you did in update it would restart every frame
     {
-        player.GetComponent<PlayerScript>().TakeDamage(damage);
+        ps.TakeDamage(damage);
 
         //animation for leaping at the player
         Vector2 originalPosition = m_transform.position; // the position before he leeps to the player

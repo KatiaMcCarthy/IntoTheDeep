@@ -12,6 +12,7 @@ TagManager:
   - PlayerBubbles
   - hurtPanel
   - ShotPoint
+  - abilityFirePoint
   layers:
   - Default
   - TransparentFX

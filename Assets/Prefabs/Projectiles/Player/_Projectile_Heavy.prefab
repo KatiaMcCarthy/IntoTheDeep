@@ -92,7 +92,6 @@ GameObject:
   - component: {fileID: 3336107941611634384}
   - component: {fileID: 3752062761297229517}
   - component: {fileID: 548880476450815306}
-  - component: {fileID: 2106790106800916409}
   m_Layer: 0
   m_Name: _Projectile_Heavy
   m_TagString: Untagged
@@ -133,6 +132,10 @@ MonoBehaviour:
   damage: 5
   explosion: {fileID: 7549403681302372495, guid: 06105dffe5e6ba746b507f3dd1d55b1e,
     type: 3}
+  player: {fileID: 0}
+  ps: {fileID: 0}
+  pRB: {fileID: 0}
+  playerSpeed: 0
 --- !u!61 &548880476450815306
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -159,27 +162,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.39762697, y: 1.2703567}
   m_EdgeRadius: 0
---- !u!50 &2106790106800916409
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3336107941611634391}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 4
 --- !u!1 &4172592036989240030
 GameObject:
   m_ObjectHideFlags: 0
