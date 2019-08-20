@@ -24,6 +24,19 @@ public class qaControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            //puase the game
+            Time.timeScale = 0;
+        }
+        if(Input.GetKeyDown(KeyCode.U))
+        {
+            //unpause the game
+            Time.timeScale = 1;
+        }
+
+
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             Restart(); //restarts the game
@@ -37,10 +50,12 @@ public class qaControl : MonoBehaviour
                             //controls the QA panel
         if(Input.GetKeyDown(KeyCode.F1))
         {
+            Time.timeScale = 0;
             QApanel.SetActive(true);
         }
         else if(Input.GetKeyUp(KeyCode.F1))
         {
+            Time.timeScale = 1;
             QApanel.SetActive(false);
         }
 

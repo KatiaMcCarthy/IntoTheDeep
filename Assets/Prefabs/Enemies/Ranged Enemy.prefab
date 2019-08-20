@@ -91,7 +91,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2, y: 1.2}
+  m_Size: {x: 2.5, y: 2.5}
   m_EdgeRadius: 0
 --- !u!50 &8804237747094486042
 Rigidbody2D:
@@ -162,6 +162,7 @@ MonoBehaviour:
   - {fileID: 7944757678649589893, guid: 04bf35a4c416c2c4889a281faf448826, type: 3}
   enemyDeathEffect: {fileID: 281521820924640981, guid: 998cd2c6047a7d04d8e4c39620845c2f,
     type: 3}
+  ps: {fileID: 0}
   stopDistance: 8
   shotPoint: {fileID: 8730405229059711471}
   enemyBullet: {fileID: 2423684779336981117, guid: 040dd8789bcb1a146bf9e3dbed231859,
@@ -192,7 +193,7 @@ Transform:
   m_GameObject: {fileID: 8804237748545441136}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 8804237747094486040}
   m_RootOrder: 0

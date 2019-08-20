@@ -172,7 +172,7 @@ MonoBehaviour:
   health: 2
   speed: 5
   timeBetweenAttacks: 2
-  damage: 1
+  damage: 3
   player: {fileID: 0}
   m_transform: {fileID: 0}
   playerAttackPoint: {fileID: 0}
@@ -186,6 +186,7 @@ MonoBehaviour:
   - {fileID: 7944757678649589893, guid: 04bf35a4c416c2c4889a281faf448826, type: 3}
   enemyDeathEffect: {fileID: 281521820924640981, guid: 998cd2c6047a7d04d8e4c39620845c2f,
     type: 3}
+  ps: {fileID: 0}
   minX: -50
   maxX: 50
   minY: -30
