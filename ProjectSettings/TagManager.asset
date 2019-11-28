@@ -13,6 +13,7 @@ TagManager:
   - hurtPanel
   - ShotPoint
   - abilityFirePoint
+  - backgroundCollider
   layers:
   - Default
   - TransparentFX

@@ -61,8 +61,8 @@ public class waveSpawner : MonoBehaviour
 
     private void Update()
     {
-        
-        if(b_finnishedSpawning == true && GameObject.FindGameObjectsWithTag("Enemy").Length == 0) //if we are done spawning and no more enemies exist on the map
+        //this is where we control when to spawn the next wave, can add in a timer element as well here
+        if((b_finnishedSpawning == true && GameObject.FindGameObjectsWithTag("Enemy").Length == 0)) //if we are done spawning and no more enemies exist on the map
         {
             b_finnishedSpawning = false; //reset the finnished spawning
             if(currentWaveIndex + 1 < waves.Length) //if the new wave is still less than the total number of waves

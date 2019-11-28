@@ -53,7 +53,10 @@ public class Boss_Chase : StateMachineBehaviour
                 {
                     attackTime = Time.time + timeBetweenAttacks;
                     Debug.Log("Attacked");
-                    ba.Attack();
+
+                    animator.SetBool("isAttacking", true);
+
+                    //ba.Attack();
                 }
                 else
                 {

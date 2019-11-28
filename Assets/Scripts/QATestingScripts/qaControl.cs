@@ -156,7 +156,7 @@ public class qaControl : MonoBehaviour
         #endregion SpawnWaves 
     }
 
-    private void KillEnemys()
+    public void KillEnemys()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 

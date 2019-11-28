@@ -4410,7 +4410,8 @@ ScriptedImporter:
   importedTextureHeight: 512
   documentSize: {x: 533, y: 525}
   paperDollMode: 0
-  spriteLibrary:
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
     categories: []
   textureActualWidth: 512
   textureActualHeight: 512
@@ -4560,6 +4561,7 @@ ScriptedImporter:
       spriteId: 3d484b76555528b4ba2c64ecd82a2506
       bones: 00000000020000000b000000
       parentGroup: 0
+      order: 0
     - spritePosition:
         x: 215
         y: 22
@@ -4568,6 +4570,7 @@ ScriptedImporter:
       spriteId: 03063a486caf44b4c86a35950d72a085
       bones: 08000000
       parentGroup: 0
+      order: 0
     - spritePosition:
         x: 275
         y: 22
@@ -4576,6 +4579,7 @@ ScriptedImporter:
       spriteId: 8a2d1eecef9c4894a8d952fdfdcc64a1
       bones: 07000000
       parentGroup: 0
+      order: 0
     - spritePosition:
         x: 99
         y: 185
@@ -4584,6 +4588,7 @@ ScriptedImporter:
       spriteId: dcc36c59642f3d04eb9735acdd808f65
       bones: 0600000005000000
       parentGroup: 0
+      order: 0
     - spritePosition:
         x: 320
         y: 185
@@ -4592,6 +4597,7 @@ ScriptedImporter:
       spriteId: ba647a1a2c06f954e8158ee69785c078
       bones: 0400000003000000
       parentGroup: 0
+      order: 0
     - spritePosition:
         x: 317
         y: 396
@@ -4600,6 +4606,7 @@ ScriptedImporter:
       spriteId: 17def7441e3379848a1bfe62bca819d3
       bones: 090000000a000000
       parentGroup: 0
+      order: 0
     - spritePosition:
         x: 144
         y: 396
@@ -4608,6 +4615,7 @@ ScriptedImporter:
       spriteId: 3fdf825ea7034a74cadc308ad038bd95
       bones: 090000000a000000
       parentGroup: 0
+      order: 0
     - spritePosition:
         x: 293
         y: 371
@@ -4616,6 +4624,7 @@ ScriptedImporter:
       spriteId: bc534969095ea544e8c2bd4e9a6f88e2
       bones: 020000000a000000
       parentGroup: 0
+      order: 0
     - spritePosition:
         x: 135
         y: 371
@@ -4624,6 +4633,7 @@ ScriptedImporter:
       spriteId: 36b4516a52b4c0148aa6de3da40854bb
       bones: 0200000009000000
       parentGroup: 0
+      order: 0
     - spritePosition:
         x: 165
         y: 70
@@ -4632,6 +4642,7 @@ ScriptedImporter:
       spriteId: 46fc4b08b1a3d9544a7de0d5c91cc532
       bones: 000000000300000001000000020000000500000009000000
       parentGroup: 0
+      order: 0
     dimension: {x: 0, y: 0}
     characterGroups: []
   boneGOs:

@@ -381,7 +381,8 @@ ScriptedImporter:
   importedTextureHeight: 1024
   documentSize: {x: 919, y: 713}
   paperDollMode: 0
-  spriteLibrary:
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
     categories: []
   textureActualWidth: 1024
   textureActualHeight: 1024
