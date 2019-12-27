@@ -38,17 +38,25 @@ public class Projectile : MonoBehaviour
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.up);
 
-        // If it hits something...
-        if (hit.collider.gameObject.CompareTag("Enemy"))
+        if (hit)
         {
-            hit.collider.gameObject.GetComponent<Enemy>().TakeDamage(damage);
-            DestroyProjectile();
+            //TODO: need to impliment a better health solution
+            // If it hits something...
+            if (hit.collider.gameObject.CompareTag("Enemy"))
+            {
+                hit.collider.gameObject.GetComponent<Enemy>().TakeDamage(damage);
+                DestroyProjectile();
+            }
+            else if(hit.collider.gameObject.CompareTag("Boss"))
+            {
+                hit.collider.gameObject.GetComponent<Boss_Shark>().TakeDamage(damage);
+                DestroyProjectile();
+            }
+            else
+            {
+                //do nothing
+            }
         }
-        else
-        {
-            //do nothing
-        }
-
     }
 
     public virtual void DestroyProjectile()
@@ -64,5 +72,12 @@ public class Projectile : MonoBehaviour
             collision.GetComponent<Enemy>().TakeDamage(damage);
             DestroyProjectile();
         }
+
+        if (collision.tag == "Boss")
+        {
+            collision.GetComponent<Boss_Shark>().TakeDamage(damage);
+            DestroyProjectile();
+        }
     }
+
 }

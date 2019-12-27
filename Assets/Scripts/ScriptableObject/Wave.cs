@@ -8,4 +8,7 @@ public class Wave : ScriptableObject
     public Enemy[] enemies;
     public int count;  //how many enemys will spawn in this wave
     public float timeBetweenSpawns;
+
+    public int timeToDive; //how long the player has to survive for
+
 }

@@ -25,6 +25,12 @@ public class RangedEnemy : Enemy
             if (Vector2.Distance(m_transform.position, player.position) > stopDistance)
             {
                 Debug.DrawLine(m_transform.position, player.position);
+
+                float AngleRad = Mathf.Atan2(playerAttackPoint.position.y - m_transform.position.y, playerAttackPoint.position.x - m_transform.position.x);
+                float angle = (180 / Mathf.PI) * AngleRad;
+
+                m_transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+
                 m_transform.position = Vector2.MoveTowards(m_transform.position, player.position, speed * Time.deltaTime);
             }
 

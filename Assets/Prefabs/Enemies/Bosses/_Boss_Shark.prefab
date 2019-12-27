@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: -6099606498552311892}
   - component: {fileID: 6932841377585119022}
   - component: {fileID: 7766778548331540451}
-  m_Layer: 0
+  - component: {fileID: 3946386515554279934}
+  - component: {fileID: 4145967975982064068}
+  m_Layer: 12
   m_Name: _Boss_Shark
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,12 +87,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.071854115, y: 6.999817}
-      - {x: -4.9748855, y: -0.30174252}
-      - {x: -3.497876, y: -5.659169}
-      - {x: -0.0899452, y: -7.365239}
-      - {x: 3.4260216, y: -5.6232424}
-      - {x: 5.0826674, y: -0.40952355}
+    - - {x: 1.5960057, y: 15.734102}
+      - {x: -1.7011824, y: 17.815332}
+      - {x: -4.6132746, y: 15.695541}
+      - {x: -8.166349, y: 6.3471403}
+      - {x: -6.334732, y: -4.418045}
+      - {x: -0.9764644, y: -10.999962}
+      - {x: 4.578495, y: -4.0275106}
+      - {x: 5.437275, y: 5.707449}
 --- !u!114 &7766778548331540451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,6 +113,33 @@ MonoBehaviour:
   hitboxFour: {fileID: 0}
   hitboxFive: {fileID: 0}
   hitboxBase: {fileID: 0}
+--- !u!114 &3946386515554279934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268761982307159221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e282d16371e34804fbeddd97c75be89a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+--- !u!114 &4145967975982064068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268761982307159221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a758c2667899ab4391886e0ea212369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetween: 15
+  bP: {fileID: 0}
 --- !u!1 &268761982359413969
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,7 +151,7 @@ GameObject:
   - component: {fileID: 268761982359413968}
   - component: {fileID: 268761982359413975}
   - component: {fileID: 268761982359413974}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: _Art
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +167,7 @@ Transform:
   m_GameObject: {fileID: 268761982359413969}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.962, y: 1.803, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1775871564219116695}
   m_Father: {fileID: 268761982307159220}
@@ -180,9 +211,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 18
-  m_Sprite: {fileID: -3174074923497125357, guid: 0f2d033b67eddef4db034729549fcc4b,
-    type: 3}
-  m_Color: {r: 1, g: 0.6986105, b: 0.051886797, a: 1}
+  m_Sprite: {fileID: 21300000, guid: fed8014c59ff8e04d94815cee1df814e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -220,7 +250,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1775871564219116695}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: _Hitboxes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,7 +282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5350736133587329510}
   - component: {fileID: 6940167615856853710}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: _LungeHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,7 +297,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5896420283286362174}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.91, z: 0}
+  m_LocalPosition: {x: 0, y: 18.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1775871564219116695}
@@ -286,7 +316,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.018135905, y: -0.05977875}
+  m_Offset: {x: -1.0819578, y: -0.05977875}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -297,5 +327,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.8705192, y: 1.6376413}
+  m_Size: {x: 10.735697, y: 1.6376413}
   m_EdgeRadius: 0

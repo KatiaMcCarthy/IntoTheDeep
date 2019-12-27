@@ -16,3 +16,4 @@ MonoBehaviour:
   - {fileID: 4414702792112765131, guid: 728ec61593d526a4d8dbb9da48d86e41, type: 3}
   count: 3
   timeBetweenSpawns: 2
+  timeToDive: 17

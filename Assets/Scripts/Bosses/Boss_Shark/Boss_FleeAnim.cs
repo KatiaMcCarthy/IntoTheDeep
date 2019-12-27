@@ -48,7 +48,7 @@ public class Boss_FleeAnim : StateMachineBehaviour
             float AngleRad = Mathf.Atan2(randPoint.y - parent.position.y, randPoint.x - parent.position.x);
             float angle = (180 / Mathf.PI) * AngleRad;
 
-            parent.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
+            parent.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
 
             parent.transform.position = Vector2.MoveTowards(parent.transform.position, randPoint, speed * Time.deltaTime);  //moves us to the point
 

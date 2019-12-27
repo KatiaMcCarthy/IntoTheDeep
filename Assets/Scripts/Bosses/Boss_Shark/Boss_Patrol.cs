@@ -16,6 +16,8 @@ public class Boss_Patrol : StateMachineBehaviour
     public GameObject backgroundColliderObject;
     public Collider2D levelCollider;
 
+    public bool b_bossAttackTrigger = false;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     // the start function for the animation, happens at the start of the animation
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -43,7 +45,7 @@ public class Boss_Patrol : StateMachineBehaviour
             float AngleRad = Mathf.Atan2(randPoint.y - parent.position.y, randPoint.x - parent.position.x);
             float angle = (180 / Mathf.PI) * AngleRad;
 
-            parent.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
+            parent.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
 
             parent.transform.position = Vector2.MoveTowards(parent.transform.position, randPoint, speed * Time.deltaTime);
 
@@ -54,9 +56,10 @@ public class Boss_Patrol : StateMachineBehaviour
 
         }
 
-        if(Input.GetKeyDown(KeyCode.C))
+        if(b_bossAttackTrigger == true)
         {
-            animator.SetTrigger("stage2");
+            animator.SetTrigger("stage2"); //this triggers the chase behaviour
+            b_bossAttackTrigger = false; //resets the trigger
         }
 
     }

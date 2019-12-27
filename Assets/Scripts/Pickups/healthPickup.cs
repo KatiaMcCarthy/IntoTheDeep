@@ -14,17 +14,20 @@ public class healthPickup : MonoBehaviour
     {
             Invoke("DestroyPickup", lifeTime);
         
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerScript>();
+            player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerScript>();
        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if (player != null)
         {
-            player.Heal(healAmmount);
-            Instantiate(pickupParticle, transform.position, transform.rotation);
-            Destroy(gameObject);
+            if (collision.CompareTag("Player"))
+            {
+                player.Heal(healAmmount);
+                Instantiate(pickupParticle, transform.position, transform.rotation);
+                Destroy(gameObject);
+            }
         }
     }
 

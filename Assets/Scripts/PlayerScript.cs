@@ -297,7 +297,8 @@ public class PlayerScript : MonoBehaviour
 
     private void Death()
     {
-        Destroy(this.gameObject);
+        FindObjectOfType<SceneTransitions>().LoadScene("LoseScene");
+        //Destroy(this.gameObject);
     }
 
 

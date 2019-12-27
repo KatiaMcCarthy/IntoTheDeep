@@ -46,7 +46,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.000000007450581, y: -0.001637429}
+  m_Offset: {x: 0, y: 0.0029390752}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -57,7 +57,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.37771797, y: 0.36789262}
+  m_Size: {x: 0.37771797, y: 0.77978015}
   m_EdgeRadius: 0
 --- !u!114 &533025876033995101
 MonoBehaviour:
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 2423684780093755380}
   - component: {fileID: 2423684780093755381}
   m_Layer: 0
-  m_Name: tempBulletArt
+  m_Name: enemyBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -143,7 +143,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 3765535559286132249, guid: bca6a8678c29519489d863016fe5d9e8,
+  m_Sprite: {fileID: 8134007533743279230, guid: 4e955ff3f7980c44d924ccd14506c450,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

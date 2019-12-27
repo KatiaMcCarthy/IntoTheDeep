@@ -19,6 +19,8 @@ public class waveSpawner : MonoBehaviour
     public GameObject boss;
     public Transform bossSpawnPoint;
 
+    public GameMaster gm;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -34,6 +36,10 @@ public class waveSpawner : MonoBehaviour
     IEnumerator SpawnWave(int index)
     {
         currentWave = waves[index];
+
+       
+        gm.timeToDive = currentWave.timeToDive;
+        gm.SetDive(currentWave.timeToDive);
 
         for (int i = 0; i < currentWave.count; i++)
         {
@@ -61,9 +67,15 @@ public class waveSpawner : MonoBehaviour
 
     private void Update()
     {
-        //this is where we control when to spawn the next wave, can add in a timer element as well here
-        if((b_finnishedSpawning == true && GameObject.FindGameObjectsWithTag("Enemy").Length == 0)) //if we are done spawning and no more enemies exist on the map
+        //this is where we control when to spawn the next wave, will need to check the bool too
+        if((b_finnishedSpawning == true && GameObject.FindGameObjectsWithTag("Enemy").Length == 0) || gm.pressedDive == true) //if we are done spawning and no more enemies exist on the map
         {
+           
+            gm.diveText.gameObject.SetActive(false);
+
+            gm.pressedDive = false;  //resets the has player pressed dive key
+            gm.hardResetTimer(); //resets the timer (this is for if you kill all enemys)
+
             b_finnishedSpawning = false; //reset the finnished spawning
             if(currentWaveIndex + 1 < waves.Length) //if the new wave is still less than the total number of waves
             {

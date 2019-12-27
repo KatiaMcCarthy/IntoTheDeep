@@ -17,7 +17,6 @@ public class Boss_Chase : StateMachineBehaviour
     private Boss_Attack ba;
 
     public bool b_BossCanAttack = true;
-    
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -41,7 +40,7 @@ public class Boss_Chase : StateMachineBehaviour
                 float AngleRad = Mathf.Atan2(playerAttackPoint.position.y - parent.position.y, playerAttackPoint.position.x - parent.position.x);
                 float angle = (180 / Mathf.PI) * AngleRad;
 
-                parent.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
+                parent.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
 
                 parent.position = Vector2.MoveTowards(parent.position, player.transform.position, speed * Time.deltaTime);
 

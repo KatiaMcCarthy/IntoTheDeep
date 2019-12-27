@@ -14,6 +14,7 @@ TagManager:
   - ShotPoint
   - abilityFirePoint
   - backgroundCollider
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - Enemy
   - Stopper
   - Minimap
-  - 
+  - Boss
   - 
   - 
   - 
@@ -50,4 +51,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: RangedFish
+    uniqueID: 3947970657
+    locked: 0
+  - name: MelleFish
+    uniqueID: 1488043287
     locked: 0
