@@ -11,4 +11,6 @@ public class Wave : ScriptableObject
 
     public int timeToDive; //how long the player has to survive for
 
+    public patrolingDeep[] distantEnemies;
+    public patrolingShallow[] nearEnemies;
 }

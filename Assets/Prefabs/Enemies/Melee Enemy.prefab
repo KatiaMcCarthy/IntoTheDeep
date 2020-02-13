@@ -50,9 +50,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
-  speed: 12
+  speed: 8
   timeBetweenAttacks: 2
-  damage: 2
+  damage: 1
   player: {fileID: 0}
   m_transform: {fileID: 0}
   playerAttackPoint: {fileID: 0}

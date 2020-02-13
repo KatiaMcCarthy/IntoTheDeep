@@ -6,6 +6,8 @@ public class waveSpawner : MonoBehaviour
 {
     public Wave[] waves;
     public Transform[] spawnPoints;
+    public Transform[] deepEnemySpawnPoints;
+    public Transform[] nearEnemiesSpawnPoints;
     public float timeBetweenWaves;
     public int numberOfWaves = 6; //sets it to 6 to start
 
@@ -40,6 +42,19 @@ public class waveSpawner : MonoBehaviour
        
         gm.timeToDive = currentWave.timeToDive;
         gm.SetDive(currentWave.timeToDive);
+
+        //here was can also spawn the passive doots
+        for (int x = 0; x < currentWave.distantEnemies.Length; x++)
+        {
+            Transform randomDeepSpot = deepEnemySpawnPoints[Random.Range(0, deepEnemySpawnPoints.Length)];
+            Instantiate(currentWave.distantEnemies[x], randomDeepSpot.position, randomDeepSpot.rotation);
+        }
+
+        for (int x = 0; x < currentWave.nearEnemies.Length; x++)
+        {
+            Transform randomNearSpot = nearEnemiesSpawnPoints[Random.Range(0, nearEnemiesSpawnPoints.Length)];
+            Instantiate(currentWave.nearEnemies[x], randomNearSpot.position, randomNearSpot.rotation);
+        }
 
         for (int i = 0; i < currentWave.count; i++)
         {

@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  speed: 8
+  speed: 4
   timeBetweenAttacks: 1
   damage: 1
   player: {fileID: 0}

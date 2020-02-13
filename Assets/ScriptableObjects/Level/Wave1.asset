@@ -17,3 +17,9 @@ MonoBehaviour:
   count: 3
   timeBetweenSpawns: 2
   timeToDive: 15
+  distantEnemies:
+  - {fileID: 41411590928222043, guid: a7f2e6cdd67f7a1428dc60bcd351a150, type: 3}
+  - {fileID: 41411590928222043, guid: a7f2e6cdd67f7a1428dc60bcd351a150, type: 3}
+  - {fileID: 41411590928222043, guid: a7f2e6cdd67f7a1428dc60bcd351a150, type: 3}
+  nearEnemies:
+  - {fileID: 5721474193447880207, guid: f5409a7c2c360764ea11068f7dd035b0, type: 3}
