@@ -6,7 +6,7 @@ using UnityEngine;
 public class LightExplosion : MonoBehaviour
 {
 
-    private Light2D myLight;
+    private UnityEngine.Experimental.Rendering.Universal.Light2D myLight;
     public float pulseSpeed = 1f; //here, a value of 0.5f would take 2 seconds and a value of 2f would take half a second
     public float targetIntensity = 8f;
     private float currentIntensity;
@@ -15,7 +15,7 @@ public class LightExplosion : MonoBehaviour
 
     void Start()
     {
-        myLight = this.GetComponent<Light2D>();
+        myLight = this.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>();
     }
     void Update()
     {

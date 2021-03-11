@@ -88,7 +88,7 @@ public class patrolingDeep : MonoBehaviour
             float AngleRad = Mathf.Atan2(randPoint.y - m_transform.position.y, randPoint.x - m_transform.position.x);
             float angle = (180 / Mathf.PI) * AngleRad;
 
-            m_transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+            m_transform.rotation = Quaternion.AngleAxis(angle - rotationAmmount, Vector3.forward);
 
             m_transform.transform.position = Vector2.MoveTowards(m_transform.transform.position, randPoint, speed * Time.deltaTime);
 

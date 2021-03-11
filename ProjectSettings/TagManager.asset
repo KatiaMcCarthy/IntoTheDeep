@@ -15,6 +15,8 @@ TagManager:
   - abilityFirePoint
   - backgroundCollider
   - Boss
+  - outsideCollider
+  - insideCollider
   layers:
   - Default
   - TransparentFX
@@ -57,4 +59,10 @@ TagManager:
     locked: 0
   - name: MelleFish
     uniqueID: 1488043287
+    locked: 0
+  - name: SummonerFish
+    uniqueID: 4271944095
+    locked: 0
+  - name: SummonerFishMinon
+    uniqueID: 2352115385
     locked: 0

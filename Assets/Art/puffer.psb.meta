@@ -61,6 +61,7 @@ ScriptedImporter:
     maxTextureSizeSet: 0
     compressionQualitySet: 0
     textureFormatSet: 0
+    applyGammaDecoding: 0
   spriteImportData:
   - name: 
     originalName: 
@@ -4645,32 +4646,8 @@ ScriptedImporter:
       order: 0
     dimension: {x: 0, y: 0}
     characterGroups: []
-  boneGOs:
-  - go: {fileID: 4374187947168470456, guid: a8d613b5c67cee942add38c94d3770a9, type: 3}
-    index: 0
-  - go: {fileID: -7729442955794947365, guid: a8d613b5c67cee942add38c94d3770a9, type: 3}
-    index: 1
-  - go: {fileID: -8061416763855559737, guid: a8d613b5c67cee942add38c94d3770a9, type: 3}
-    index: 2
-  - go: {fileID: 958832395405903292, guid: a8d613b5c67cee942add38c94d3770a9, type: 3}
-    index: 3
-  - go: {fileID: -63044016511666117, guid: a8d613b5c67cee942add38c94d3770a9, type: 3}
-    index: 4
-  - go: {fileID: -4666748632281564919, guid: a8d613b5c67cee942add38c94d3770a9, type: 3}
-    index: 5
-  - go: {fileID: 6319309088552042100, guid: a8d613b5c67cee942add38c94d3770a9, type: 3}
-    index: 6
-  - go: {fileID: -5657794448064617403, guid: a8d613b5c67cee942add38c94d3770a9, type: 3}
-    index: 7
-  - go: {fileID: 600278152567680890, guid: a8d613b5c67cee942add38c94d3770a9, type: 3}
-    index: 8
-  - go: {fileID: 5903286869059101412, guid: a8d613b5c67cee942add38c94d3770a9, type: 3}
-    index: 9
-  - go: {fileID: -913393469549691210, guid: a8d613b5c67cee942add38c94d3770a9, type: 3}
-    index: 10
-  - go: {fileID: -7462842834423866507, guid: a8d613b5c67cee942add38c94d3770a9, type: 3}
-    index: 11
   generateGOHierarchy: 0
   textureAssetName: puffer
   prefabAssetName: puffer_GO
   spriteLibAssetName: Sprite Lib
+  secondarySpriteTextures: []
