@@ -56,6 +56,8 @@ public class Boss_Patrol : StateMachineBehaviour
 
         }
 
+
+        //need a way to trigger this
         if(b_bossAttackTrigger == true)
         {
             animator.SetTrigger("stage2"); //this triggers the chase behaviour

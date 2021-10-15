@@ -12,11 +12,9 @@ public class Boss_Shark : MonoBehaviour
     private Animator anim;
     private UIManager uiManager;
     private Slider healthBar;
-    private Timer m_Timer;
 
     private void Start()
     {
-        m_Timer = this.GetComponent<Timer>();
         halfHealth = health / 2;
         anim = this.GetComponentInChildren<Animator>();
         uiManager = FindObjectOfType<UIManager>();
@@ -30,7 +28,7 @@ public class Boss_Shark : MonoBehaviour
     {
         health -= amount;
         healthBar.value = health;
-        m_Timer.ReduceCurrentTime(); //boss will attack sooner when it takes damage
+       // m_Timer.ReduceCurrentTime(); //boss will attack sooner when it takes damage
         if (health <= 0)
         {
             Die();

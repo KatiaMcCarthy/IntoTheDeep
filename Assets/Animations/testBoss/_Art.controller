@@ -20,7 +20,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: walk
+  m_Name: patrol
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -167,6 +167,7 @@ MonoBehaviour:
   speed: 10
   backgroundColliderObject: {fileID: 0}
   levelCollider: {fileID: 0}
+  b_bossAttackTrigger: 0
 --- !u!1107 &-247680879544898369
 AnimatorStateMachine:
   serializedVersion: 5
@@ -190,7 +191,7 @@ AnimatorStateMachine:
     m_Position: {x: 210, y: 280, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8957004160647764081}
-    m_Position: {x: 440, y: 210, z: 0}
+    m_Position: {x: 510, y: 230, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1754355739559835833}
     m_Position: {x: 430, y: 370, z: 0}
@@ -306,7 +307,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Run Ani Chase Behav
+  m_Name: Chase
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:

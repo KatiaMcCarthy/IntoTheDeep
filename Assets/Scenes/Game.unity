@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1997,12 +1997,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - {fileID: 11400000, guid: 45c76339041aa1b4ca4c5dc436d7eda4, type: 2}
-  - {fileID: 11400000, guid: 3bacfe99ee6fde347b1435875800a270, type: 2}
-  - {fileID: 11400000, guid: 801fba7e9373a5e41b94a85baba7cdbb, type: 2}
-  - {fileID: 11400000, guid: 58766d1df56025745ab347530a1d7014, type: 2}
-  - {fileID: 11400000, guid: 0d2ab973c3542e84898526166d4703ef, type: 2}
-  - {fileID: 11400000, guid: 819acd6ae00387f44b66ebeea62f057b, type: 2}
-  - {fileID: 11400000, guid: bf51f0aeae2366e41947682f0cda7d01, type: 2}
   spawnPoints:
   - {fileID: 689067042}
   - {fileID: 1730645130}
@@ -13513,7 +13507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b72790c4b421fe844b8e0ba7c6844687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
+  speed: 60
   slowFactor: 3
   health: 5
   turnFactor: 12

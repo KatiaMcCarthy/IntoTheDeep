@@ -36,6 +36,11 @@ public class qaControl : MonoBehaviour
             Time.timeScale = 1;
         }
 
+        if(Input.GetKeyDown(KeyCode.Backslash))
+        {
+            PlayerScript player = FindObjectOfType<PlayerScript>();
+            player.TakeDamage(-5);
+        }
 
         if(Input.GetKeyDown(KeyCode.Escape))
         {
