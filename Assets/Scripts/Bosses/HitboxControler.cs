@@ -17,7 +17,7 @@ public class HitboxControler : MonoBehaviour
     public GameObject hitboxBase; //this is the base hitbox, your general body hitbox
 
     List<GameObject> hitboxes = new List<GameObject>();
-  
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +38,7 @@ public class HitboxControler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     //to be called when a boss lundges at the player
@@ -47,5 +47,10 @@ public class HitboxControler : MonoBehaviour
         hitboxOne.SetActive(true); // the first hitbox, in our case the lunge attacks
 
         Debug.Log("has lunged attacked");
+    }
+
+    public void OnFinnishLungeAttack()
+    {
+        hitboxOne.SetActive(false);
     }
 }

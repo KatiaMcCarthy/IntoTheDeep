@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class GameMaster : MonoBehaviour
 {
 
-    public Text timerText;
+    public Text timerText; //todo add in a timer
     public int timeToDive = 30;  //time in seconds before you can dive
     public float diveTime = 0;
     public bool canDive = false;

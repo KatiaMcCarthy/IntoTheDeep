@@ -34,8 +34,6 @@ public class patrolingShallow : MonoBehaviour
     public bool minionEnemy = false;
     public bool bossEnemy = false;
 
-    private int rotationAmmount = 90;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -57,35 +55,30 @@ public class patrolingShallow : MonoBehaviour
         {
             sr.sprite = images[0];
             artTrans.localScale = new Vector3(5f, 5f, 1);
-            rotationAmmount = -90;
         }
 
         if (rangedEnemy == true)
         {
             sr.sprite = images[1];
             artTrans.localScale = new Vector3(5f, 5f, 1);
-            rotationAmmount = 90;
         }
 
         if (summonerEnemy == true)
         {
             sr.sprite = images[2];
             artTrans.localScale = new Vector3(5f, 5f, 1);
-            rotationAmmount = -90;
         }
 
         if (minionEnemy == true)
         {
             sr.sprite = images[3];
             artTrans.localScale = new Vector3(6.5f, 6.5f, 1);
-            rotationAmmount = 90;
         }
 
         if (bossEnemy == true)
         {
             sr.sprite = images[4];
             artTrans.localScale = new Vector3(0.85f, 0.85f, 1);
-            rotationAmmount = 90;
         }
         // we may need to affect the scale of your child object
 
@@ -105,7 +98,7 @@ public class patrolingShallow : MonoBehaviour
             float AngleRad = Mathf.Atan2(randPoint.y - m_transform.position.y, randPoint.x - m_transform.position.x);
             float angle = (180 / Mathf.PI) * AngleRad;
 
-            m_transform.rotation = Quaternion.AngleAxis(angle - rotationAmmount, Vector3.forward);
+            m_transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
 
             m_transform.transform.position = Vector2.MoveTowards(m_transform.transform.position, randPoint, speed * Time.deltaTime);
 

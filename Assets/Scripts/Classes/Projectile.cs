@@ -49,7 +49,7 @@ public class Projectile : MonoBehaviour
             }
             else if(hit.collider.gameObject.CompareTag("Boss"))
             {
-                hit.collider.gameObject.GetComponent<Boss_Shark>().TakeDamage(damage);
+                hit.collider.gameObject.GetComponent<SharkBoss>().TakeDamage(damage);
                 DestroyProjectile();
             }
             else
@@ -75,7 +75,7 @@ public class Projectile : MonoBehaviour
 
         if (collision.tag == "Boss")
         {
-            collision.GetComponent<Boss_Shark>().TakeDamage(damage);
+            collision.GetComponent<SharkBoss>().TakeDamage(damage);
             DestroyProjectile();
         }
     }

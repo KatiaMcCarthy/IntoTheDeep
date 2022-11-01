@@ -18,8 +18,10 @@ public class RangedEnemy : Enemy
         m_anim = GetComponent<Animator>();
     }
 
-    private void Update()
+    protected override void Update()
     {
+        base.Update();
+
         if (player != null)
         {
             if (Vector2.Distance(m_transform.position, player.position) > stopDistance)

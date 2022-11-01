@@ -49,13 +49,13 @@ MonoBehaviour:
   levelCollider: {fileID: 0}
   speed: 10
   images:
-  - {fileID: 1012751927384531831, guid: 166754b9bb81c32428859fa94bcff7b4, type: 3}
-  - {fileID: 5975523725854628578, guid: c46f9815e2519e04f992e4f7b48098eb, type: 3}
-  - {fileID: -7498726390282265615, guid: 8699e435457a86b4382c19bd90448316, type: 3}
-  - {fileID: -8762911009996567522, guid: 8699e435457a86b4382c19bd90448316, type: 3}
+  - {fileID: 60144425318149857, guid: e9bc6bc8402ccbe4d966ebf03d6be872, type: 3}
+  - {fileID: 7903251790188502654, guid: cd0e397c1177e7347830445959c6859d, type: 3}
+  - {fileID: 5801248371808489956, guid: 9377b1268d9504841b9018c10ab4f0e8, type: 3}
+  - {fileID: 39214321340212862, guid: dc314b523b930484d9f2c07486c1e3f4, type: 3}
   - {fileID: -3820792830353348101, guid: e83255d6f41bc7f449ea1adb5f3940ad, type: 3}
-  melleEnemy: 1
-  rangedEnemy: 0
+  melleEnemy: 0
+  rangedEnemy: 1
   summonerEnemy: 0
   minionEnemy: 0
   bossEnemy: 0
@@ -83,13 +83,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7018578245852064529}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.6988969, w: 0.7152225}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4903, y: 0.4903, z: 0.4903}
   m_Children: []
   m_Father: {fileID: 4241245725180983495}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 88.677}
 --- !u!212 &6597514042372751122
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -104,6 +104,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -128,7 +130,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1012751927384531831, guid: 166754b9bb81c32428859fa94bcff7b4,
+  m_Sprite: {fileID: 7903251790188502654, guid: cd0e397c1177e7347830445959c6859d,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.7411765}
   m_FlipX: 0

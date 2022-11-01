@@ -11,13 +11,8 @@ public class PlayerScript : MonoBehaviour
 
     public float speed = 0.0f;
     public float slowFactor = 0.0f;
-    public int health = 0;
     public float turnFactor = 0.0f;
-
-    //Health UI
-    public Image[] healthGears;
-    public Sprite emptyGear;
-    public Sprite fullGear;
+  
 
     private Rigidbody2D m_rb;
     private Vector2 moveAmmount;
@@ -92,8 +87,6 @@ public class PlayerScript : MonoBehaviour
         m_RightVector = Vector2.right;
         //This Vector is zeroed out for when the Rigidbody should not move
         m_ResetVector = Vector2.zero;
-
-        UpdateHealthUI(health); //intializes the health ui
 
         if (VirtualCamera != null) //intializes camera componenet
             virtualCameraNoise = VirtualCamera.GetCinemachineComponent<Cinemachine.CinemachineBasicMultiChannelPerlin>();
@@ -237,47 +230,7 @@ public class PlayerScript : MonoBehaviour
         Instantiate(weaponToEquip, weaponLocationPt.position, weaponLocationPt.rotation, weaponParentObject);
     }
 
-    public void UpdateHealthUI(int currentHealth)
-    {
-        for (int i = 0; i < healthGears.Length; i++)  //for each possible heart
-        {
-            if(i < currentHealth)  //if our great index is less than current health fill the heart, do this untill it is not less
-            {
-                healthGears[i].sprite = fullGear;
-            }
-            else
-            {
-                healthGears[i].sprite = emptyGear; //turn the rest of the hearts empty
-            }
-        }
-    }
-
-    public void Heal(int healAmmount)
-    {
-        if (health + healAmmount > 5)
-        {
-            health = 5;
-        }
-        else
-        {
-            health += healAmmount;
-        }
-
-        UpdateHealthUI(health);
-    }
-
-
-    public void TakeDamage(int damageAmmount)
-    {
-        health -= damageAmmount;
-        UpdateHealthUI(health); //updates the health ui
-        HurtPanel(); //updates the hurt panel
-        if (health <= 0)
-        {
-            Death();
-        }
-    }
-
+    
     public void LookAtMouse()
     {
         // Distance from camera to object.  We need this to get the proper calculation.
@@ -295,16 +248,4 @@ public class PlayerScript : MonoBehaviour
         Debug.DrawLine(m_transform.position, mouse);
     }
 
-    private void Death()
-    {
-        FindObjectOfType<SceneTransitions>().LoadScene("LoseScene");
-        //Destroy(this.gameObject);
-    }
-
-
-    //Hurt panel stuff
-    private void HurtPanel()
-    {
-        hurtPanel.SetTrigger("hurt");
-    }
 }

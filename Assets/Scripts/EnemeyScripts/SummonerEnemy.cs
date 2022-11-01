@@ -31,8 +31,10 @@ public class SummonerEnemy : Enemy
         m_anim = this.gameObject.GetComponent<Animator>();
     }
 
-    private void Update()
+    protected override void Update()
     {
+        base.Update();
+
         if(player != null)
         {
             Debug.Log("Player isnt null");
@@ -43,7 +45,7 @@ public class SummonerEnemy : Enemy
                 float AngleRad = Mathf.Atan2(targetPostion.y - m_transform.position.y, targetPostion.x - m_transform.position.x);
                 float angle = (180 / Mathf.PI) * AngleRad;
 
-                m_transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
+                m_transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
 
                 m_transform.position = Vector2.MoveTowards(m_transform.position, targetPostion, speed * Time.deltaTime);
                 m_anim.SetBool("isRunning", true);
@@ -53,7 +55,7 @@ public class SummonerEnemy : Enemy
                 float AngleRad = Mathf.Atan2(player.position.y - m_transform.position.y, player.position.x - m_transform.position.x);
                 float angle = (180 / Mathf.PI) * AngleRad;
 
-                m_transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
+                m_transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
 
 
                 m_anim.SetBool("isRunning", false);
@@ -71,7 +73,7 @@ public class SummonerEnemy : Enemy
                 float AngleRad = Mathf.Atan2(playerAttackPoint.position.y - m_transform.position.y, playerAttackPoint.position.x - m_transform.position.x);
                 float angle = (180 / Mathf.PI) * AngleRad;
 
-                m_transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
+                m_transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
 
                 if (Time.time >= attackTime)
                     {
@@ -94,7 +96,7 @@ public class SummonerEnemy : Enemy
 
     IEnumerator MeleeAttack() //a coroutine that will execute once triggered, allows for you to have an animation playing over frames, were as if  you did in update it would restart every frame
     {
-        ps.TakeDamage(damage);
+        playerHealth.TakeDamage(damage);
 
         //animation for leaping at the player
         Vector2 originalPosition = m_transform.position; // the position before he leeps to the player

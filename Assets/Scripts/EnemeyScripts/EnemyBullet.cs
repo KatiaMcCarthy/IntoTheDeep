@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyBullet : MonoBehaviour
 {
     private PlayerScript playerScript;
+    private PropertyPlayerHealth playerHealth;
     private Vector2 targetPosition;
     private Transform m_Transform;
 
@@ -17,6 +18,7 @@ public class EnemyBullet : MonoBehaviour
     {
         m_Transform = this.transform;
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerScript>();
+        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PropertyPlayerHealth>();
         targetPosition = playerScript.transform.position;
     }
 
@@ -37,7 +39,7 @@ public class EnemyBullet : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            playerScript.TakeDamage(damage);
+            playerHealth.TakeDamage(damage);
             Death();
         }
     }

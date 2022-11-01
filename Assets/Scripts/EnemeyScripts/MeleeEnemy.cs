@@ -10,8 +10,10 @@ public class MeleeEnemy : Enemy
     private float attackTime;
 
 
-    private void Update()
+    protected override void Update()
     {
+        base.Update();
+
         if (player != null)
         {
             if (Vector2.Distance(m_transform.position, playerAttackPoint.position) > stopDistance)
@@ -21,7 +23,7 @@ public class MeleeEnemy : Enemy
                 float AngleRad = Mathf.Atan2(playerAttackPoint.position.y - m_transform.position.y, playerAttackPoint.position.x - m_transform.position.x);
                 float angle = (180 / Mathf.PI) * AngleRad;
 
-                m_transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
+                m_transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
 
                 m_transform.position = Vector2.MoveTowards(m_transform.position, player.position, speed * Time.deltaTime);
 
@@ -44,7 +46,7 @@ public class MeleeEnemy : Enemy
 
     IEnumerator MeleeAttack()
     {
-        ps.TakeDamage(damage);
+        playerHealth.TakeDamage(damage);
 
         //animation for leaping at the player
         Vector2 originalPosition = m_transform.position; // the position before he leeps to the player
@@ -59,11 +61,11 @@ public class MeleeEnemy : Enemy
 
             if (formula >= 0.8f)
             {
-                ps.b_Hit = true;
+                playerScript.b_Hit = true;
             }
             else
             {
-                ps.b_Hit = false;
+                playerScript.b_Hit = false;
             }
 
 

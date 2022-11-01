@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class healthPickup : MonoBehaviour
 {
-    PlayerScript player;
+    PropertyPlayerHealth player;
     public int healAmmount;
     public int lifeTime;
 
@@ -14,7 +14,7 @@ public class healthPickup : MonoBehaviour
     {
             Invoke("DestroyPickup", lifeTime);
         
-            player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerScript>();
+            player = GameObject.FindGameObjectWithTag("Player").GetComponent<PropertyPlayerHealth>();
        
     }
 

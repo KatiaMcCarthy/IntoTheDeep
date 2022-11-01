@@ -38,7 +38,7 @@ public class qaControl : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Backslash))
         {
-            PlayerScript player = FindObjectOfType<PlayerScript>();
+            PropertyPlayerHealth player = FindObjectOfType<PropertyPlayerHealth>();
             player.TakeDamage(-5);
         }
 

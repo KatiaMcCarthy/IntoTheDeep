@@ -28,18 +28,39 @@ public class Enemy : MonoBehaviour
     public GameObject enemyDeathEffect;
 
     [HideInInspector]
-    public PlayerScript ps;
+    public PlayerScript playerScript;
+    [HideInInspector]
+    public PropertyPlayerHealth playerHealth;
 
-    private Color m_Color;
+    protected State currentState;
+
+    public void SetState(State state)
+    {
+        if (currentState != null)
+            currentState.OnStateExit();
+
+        currentState = state;
+
+        if (currentState != null)
+            currentState.OnStateEnter();
+    }
 
     public virtual void Start()
     {
         m_transform = this.gameObject.transform;
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        ps = player.GetComponent<PlayerScript>();
-        playerAttackPoint = GameObject.FindGameObjectWithTag("PlayerAttackPoint").transform;
-        m_Color = GetComponentInChildren<SpriteRenderer>().color; 
+        playerScript = player.GetComponent<PlayerScript>();
+        playerHealth = player.GetComponent<PropertyPlayerHealth>();
 
+        playerAttackPoint = GameObject.FindGameObjectWithTag("PlayerAttackPoint").transform;
+
+
+    }
+    protected virtual void Update()
+    {
+        //adding safty check while we port all ai over to the new system
+        if(currentState != null)
+        currentState.Tick();
     }
 
     public void TakeDamage(int damageAmmount)
@@ -68,9 +89,20 @@ public class Enemy : MonoBehaviour
 
     IEnumerator FlashColor()
     {
-        GetComponentInChildren<SpriteRenderer>().color = Color.red;
+        SpriteRenderer[] spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
+
+        foreach (SpriteRenderer renderer in spriteRenderers)
+        {
+            renderer.color = Color.red;
+        }
+
         yield return new WaitForSeconds(0.25f);
-        GetComponentInChildren<SpriteRenderer>().color = Color.white;
+        
+        foreach (SpriteRenderer renderer in spriteRenderers)
+        {
+            renderer.color = Color.white;
+        }
+
         yield return null;
     }
 
