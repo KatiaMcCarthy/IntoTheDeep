@@ -20,8 +20,6 @@ public class SharkBrain : MonoBehaviour
     {
         float i = Random.Range(0, attackWeight + patrolWeight + chaseWeight + rangedWeight + fleeWeight + chargeLungeWeight + lungeWeight + swipeWeight);
 
-        Debug.Log(i);
-
         if(i == 0)
         {
             DecideState();

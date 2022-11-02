@@ -25,6 +25,7 @@ ScriptedImporter:
     streamingMipmaps: 1
     streamingMipmapsPriority: 0
     vTOnly: 0
+    ignoreMasterTextureLimit: 0
     nPOTScale: 1
     sRGBTexture: 1
     spriteMode: 2
@@ -79,7 +80,6 @@ ScriptedImporter:
       width: 0
       height: 0
     spriteID: 
-    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -103,7 +103,6 @@ ScriptedImporter:
       width: 535
       height: 208
     spriteID: c988e12ab88d67c4aa89d9a82b0be007
-    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -125,7 +124,6 @@ ScriptedImporter:
       width: 297
       height: 46
     spriteID: 7e52487ec25a35841a9fc573c6a1489b
-    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -147,7 +145,6 @@ ScriptedImporter:
       width: 219
       height: 48
     spriteID: 12a5de4f64818954589e69ba47e956da
-    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -169,7 +166,6 @@ ScriptedImporter:
       width: 63
       height: 66
     spriteID: 9976ae359b2d50045bea4fa3ccae3ffc
-    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -191,7 +187,6 @@ ScriptedImporter:
       width: 59
       height: 63
     spriteID: 6a9b8e20f0734d34ab228190eeaa53f3
-    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -213,7 +208,6 @@ ScriptedImporter:
       width: 500
       height: 243
     spriteID: 7f500c926011ff844bb9b0553728818d
-    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -235,7 +229,6 @@ ScriptedImporter:
       width: 617
       height: 334
     spriteID: 2d27a6f958baf474093ba63706a10402
-    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -257,7 +250,6 @@ ScriptedImporter:
       width: 413
       height: 53
     spriteID: 4154cedf4c060944f8de5de82f527f6f
-    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -279,7 +271,6 @@ ScriptedImporter:
       width: 870
       height: 581
     spriteID: 891c7c2f68a628544b88b17f4bcf4f02
-    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -301,7 +292,6 @@ ScriptedImporter:
       width: 1600
       height: 900
     spriteID: 5ca9a34a0b44ec34db1bfc49eaeb74eb
-    internalID: 0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -311,23 +301,34 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 4, y: 4}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
   platformSettings: []
   mosaicLayers: 1
+  characterMode: 1
   documentPivot: {x: 0, y: 0}
   documentAlignment: 7
   importHiddenLayers: 0
-  importedTextureWidth: 2048
-  importedTextureHeight: 2048
-  documentSize: {x: 1600, y: 900}
+  layerMappingOption: 2
+  generatePhysicsShape: 0
   paperDollMode: 0
   keepDupilcateSpriteName: 0
+  skeletonAssetReferenceID: 
   spriteCategoryList:
     categories: []
-  textureActualWidth: 2048
-  textureActualHeight: 2048
   spritePackingTag: 
   resliceFromLayer: 0
-  characterMode: 1
   mosaicPSDLayers: []
   rigPSDLayers:
   - name: 'Abilities: E: Movement boost F: Flare'
@@ -337,6 +338,9 @@ ScriptedImporter:
     spriteID: c988e12ab88d67c4aa89d9a82b0be007
     layerID: 16
     mosaicPosition: {x: 882, y: 1254}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: Movement
     spriteName: Movement
     isGroup: 0
@@ -344,6 +348,9 @@ ScriptedImporter:
     spriteID: 7e52487ec25a35841a9fc573c6a1489b
     layerID: 15
     mosaicPosition: {x: 1507, y: 1224}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: Abilities
     spriteName: Abilities
     isGroup: 0
@@ -351,6 +358,9 @@ ScriptedImporter:
     spriteID: 12a5de4f64818954589e69ba47e956da
     layerID: 14
     mosaicPosition: {x: 1507, y: 1278}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: Rectangle 2
     spriteName: Rectangle 2
     isGroup: 0
@@ -358,6 +368,9 @@ ScriptedImporter:
     spriteID: 9976ae359b2d50045bea4fa3ccae3ffc
     layerID: 13
     mosaicPosition: {x: 1425, y: 1254}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: Rectangle 1
     spriteName: Rectangle 1
     isGroup: 0
@@ -365,6 +378,9 @@ ScriptedImporter:
     spriteID: 6a9b8e20f0734d34ab228190eeaa53f3
     layerID: 12
     mosaicPosition: {x: 1425, y: 1328}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: Layer 7
     spriteName: Layer 7
     isGroup: 0
@@ -372,6 +388,9 @@ ScriptedImporter:
     spriteID: 7f500c926011ff844bb9b0553728818d
     layerID: 17
     mosaicPosition: {x: 1507, y: 912}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: Layer 6
     spriteName: Layer 6
     isGroup: 0
@@ -379,6 +398,9 @@ ScriptedImporter:
     spriteID: 2d27a6f958baf474093ba63706a10402
     layerID: 11
     mosaicPosition: {x: 882, y: 912}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: INTO THE DEEP
     spriteName: INTO THE DEEP
     isGroup: 0
@@ -386,6 +408,9 @@ ScriptedImporter:
     spriteID: 4154cedf4c060944f8de5de82f527f6f
     layerID: 5
     mosaicPosition: {x: 1507, y: 1163}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: menuSub
     spriteName: menuSub
     isGroup: 0
@@ -393,6 +418,9 @@ ScriptedImporter:
     spriteID: 891c7c2f68a628544b88b17f4bcf4f02
     layerID: 2
     mosaicPosition: {x: 4, y: 912}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: Background
     spriteName: Background
     isGroup: 0
@@ -400,13 +428,14 @@ ScriptedImporter:
     spriteID: 5ca9a34a0b44ec34db1bfc49eaeb74eb
     layerID: 1
     mosaicPosition: {x: 4, y: 4}
-  characterData:
-    bones: []
-    parts: []
-    dimension: {x: 0, y: 0}
-    characterGroups: []
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
   generateGOHierarchy: 0
   textureAssetName: Menu
   prefabAssetName: Menu_GO
   spriteLibAssetName: Sprite Lib
+  skeletonAssetName: 
   secondarySpriteTextures: []

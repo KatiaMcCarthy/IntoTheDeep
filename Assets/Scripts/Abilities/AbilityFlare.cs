@@ -43,9 +43,7 @@ public class AbilityFlare : Ability
 
     public void GetFirePoint()
     {
-        Debug.Log("hit get fire point");
         abilityFirePoint = GameObject.FindGameObjectWithTag("abilityFirePoint");
-        Debug.Log(abilityFirePoint.name);
     }
 
     public void ClearFirePoint()

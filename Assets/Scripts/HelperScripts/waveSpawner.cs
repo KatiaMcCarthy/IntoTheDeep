@@ -92,7 +92,7 @@ public class waveSpawner : MonoBehaviour
             gm.hardResetTimer(); //resets the timer (this is for if you kill all enemys)
 
             b_finnishedSpawning = false; //reset the finnished spawning
-            if(currentWaveIndex + 1 < waves.Length) //if the new wave is still less than the total number of waves
+            if (currentWaveIndex + 1 < waves.Length) //if the new wave is still less than the total number of waves
             {
                 currentWaveIndex++; //increase our index, (were on a new wave)
                 StartCoroutine(StartNextWave(currentWaveIndex)); //pass in the index to the next new wave
@@ -103,13 +103,10 @@ public class waveSpawner : MonoBehaviour
 
                 Debug.Log("Game Finnished");  //temp win screen
             }
-
         }
-      
     }
 
     //Getters
-
     public int GetCurrentWaveIndex()
     {
         return currentWaveIndex;

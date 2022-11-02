@@ -9,6 +9,7 @@ public class SharkPatrolBehaviour : MonoBehaviour
     private Vector2 randPoint;
     private SharkBoss boss;
     [SerializeField] private float attackRange;
+    [SerializeField] private Transform attackPoint;
 
     private void Start()
     {
@@ -23,7 +24,6 @@ public class SharkPatrolBehaviour : MonoBehaviour
     {
         if (randPoint != null)
         {
-
             Debug.DrawLine(transform.position, randPoint);
 
             float AngleRad = Mathf.Atan2(randPoint.y - transform.position.y, randPoint.x - transform.position.x);
@@ -37,12 +37,10 @@ public class SharkPatrolBehaviour : MonoBehaviour
             {
                 randPoint = GetRandomPointInCollider();
             }
-
         }
 
-        if (Vector3.Distance(transform.position,boss.GetPlayer().position) <= attackRange)
+        if (Vector3.Distance(transform.position, boss.GetPlayer().position) <= attackRange)
         {
-
             SharkBrain brain = boss.GetComponent<SharkBrain>();
             brain.ResetBrain();
             brain.attackWeight = 15.0f;
@@ -69,7 +67,10 @@ public class SharkPatrolBehaviour : MonoBehaviour
         return point;
     }
 
-
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
     private void OnDestroy()
     {
         boss.OnMoveCall -= MoveToward;

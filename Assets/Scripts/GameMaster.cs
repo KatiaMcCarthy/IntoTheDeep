@@ -43,8 +43,6 @@ public class GameMaster : MonoBehaviour
     {
         canDive = false; //a new wave has spawned so you cannot dive
         timerActive = true;
-
-        Debug.Log("wave start");
     }
 
     public void Timer()

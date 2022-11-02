@@ -60,7 +60,6 @@ public class SharkSwipeAttack : MonoBehaviour
         boss.OnChargeAttackCall -= PlayAnimation;
     }
 
-
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);        

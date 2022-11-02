@@ -38,10 +38,8 @@ public class SharkFleeBehaviour : MonoBehaviour
         if (Vector2.Distance(transform.position, ps.transform.position) < fleeDistance)
         destination = GetDestination();
 
-
         if (destination != null)
         {
-
             Debug.DrawLine(transform.position, destination);
 
             float AngleRad = Mathf.Atan2(destination.y - transform.position.y, destination.x - transform.position.x);

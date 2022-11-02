@@ -45,7 +45,6 @@ public class SharkPrepareCharge : MonoBehaviour
         initateCharge = false;
     }
 
-
     private void OnDestroy()
     {
         boss.OnPrepareChargeCall -= AimAttack;

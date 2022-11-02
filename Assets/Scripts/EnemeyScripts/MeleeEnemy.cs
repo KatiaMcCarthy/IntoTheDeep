@@ -51,11 +51,10 @@ public class MeleeEnemy : Enemy
         //animation for leaping at the player
         Vector2 originalPosition = m_transform.position; // the position before he leeps to the player
         Vector2 targetPosition = playerAttackPoint.transform.position; // the position of the player before he leeps the the player
-        Debug.Log("hit corroutine");
+
         float percent = 0; // stores how much of the animation we have done so far
         while (percent <= 1)
         {
-            Debug.Log("hit while");
             percent += Time.deltaTime * attackSpeed; //this will incriment the animation bit by bit, the factor of attack speed allows you to control how fast the animation plays
             float formula = (-Mathf.Pow(percent, 2) + percent) * 4;
 

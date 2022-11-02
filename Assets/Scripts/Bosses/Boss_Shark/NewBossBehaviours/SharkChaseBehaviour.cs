@@ -7,6 +7,8 @@ public class SharkChaseBehaviour : MonoBehaviour
     private Vector2 destination;
     private SharkBoss boss;
     private PlayerScript ps;
+    [SerializeField] private Transform attackPoint;
+    [SerializeField] private float minChaseDistance;
 
     private void Start()
     {
@@ -22,7 +24,6 @@ public class SharkChaseBehaviour : MonoBehaviour
 
         if (destination != null)
         {
-
             Debug.DrawLine(transform.position, destination);
 
             float AngleRad = Mathf.Atan2(destination.y - transform.position.y, destination.x - transform.position.x);
@@ -30,9 +31,9 @@ public class SharkChaseBehaviour : MonoBehaviour
 
             transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
 
-            transform.transform.position = Vector2.MoveTowards(transform.position, destination, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, destination, speed * Time.deltaTime);
 
-            if (Vector2.Distance(transform.position, destination) < 0.2f)
+            if (Vector2.Distance(attackPoint.position, destination) < minChaseDistance)
             {
                 SharkBrain brain = boss.GetComponent<SharkBrain>();
                 brain.ResetBrain();
@@ -42,6 +43,11 @@ public class SharkChaseBehaviour : MonoBehaviour
                 boss.GetComponent<SharkBrain>().DecideState();
             }
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(attackPoint.position , minChaseDistance);
     }
 
     private void OnDestroy()

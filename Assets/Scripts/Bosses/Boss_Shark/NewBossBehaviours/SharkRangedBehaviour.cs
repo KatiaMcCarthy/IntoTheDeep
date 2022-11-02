@@ -28,26 +28,29 @@ public class SharkRangedBehaviour : MonoBehaviour
 
     void DoAttack()
     {
-
-        if (boss.player != null && Vector2.Distance(boss.m_transform.position , boss.playerAttackPoint.position) < attackRange)
+        if (boss.player != null)
         {
-            if (Time.time >= attackTime)
-            {
-                attackTime = Time.time + attackSpeed;
+            float AngleRad = Mathf.Atan2(boss.playerAttackPoint.transform.position.y - transform.position.y, boss.playerAttackPoint.transform.position.x - transform.position.x);
+            float angle = (180 / Mathf.PI) * AngleRad;
 
-                //can call animation wich calles the attack
-                RangedAttack();
+            transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+ 
+            if (boss.player != null && Vector2.Distance(boss.m_transform.position, boss.playerAttackPoint.position) < attackRange)
+            {
+                if (Time.time >= attackTime)
+                {
+                    attackTime = Time.time + attackSpeed;
+
+                     //can call animation wich calles the attack
+                    RangedAttack();
+                }
+            }
+            
+            if(Vector2.Distance(transform.position, boss.GetPlayer().position) >= GetAttackRange())
+            {
+                RecalcState();
             }
         }
-        else
-        {
-            SharkBrain brain = boss.GetComponent<SharkBrain>();
-            brain.ResetBrain();
-            brain.chaseWeight = 100.0f;
-
-            boss.GetComponent<SharkBrain>().DecideState();
-        }
-
     }
 
     public void RangedAttack()
@@ -61,6 +64,15 @@ public class SharkRangedBehaviour : MonoBehaviour
 
             Instantiate(projectile, attackPoint.position, attackPoint.rotation);
         }
+    }
+
+    private void RecalcState()
+    {
+        SharkBrain brain = boss.GetComponent<SharkBrain>();
+        brain.ResetBrain();
+        brain.chaseWeight = 100.0f;
+
+        boss.GetComponent<SharkBrain>().DecideState();
     }
 
     private void OnDrawGizmos()

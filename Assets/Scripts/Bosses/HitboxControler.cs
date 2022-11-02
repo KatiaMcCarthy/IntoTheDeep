@@ -30,7 +30,6 @@ public class HitboxControler : MonoBehaviour
 
         foreach (GameObject item in hitboxes)
         {
-            Debug.Log(item.name);
             item.SetActive(false);
         }
     }
